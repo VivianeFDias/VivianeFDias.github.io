@@ -26,7 +26,7 @@ body {
 header {
     background-color: #f4f4f4;
     padding: 20px 0;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
@@ -36,6 +36,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -59,18 +60,20 @@ nav a:hover {
     background-image: url(images/fundo.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #e3ad40;
-    position: relative;
+    padding: 40px 20px;
 }
 
 .container {
     z-index: 2;
     text-align: center;
+    padding: 0 15px;
 }
 
 .content img {
@@ -78,11 +81,10 @@ nav a:hover {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #e3ad40;
-    justify-content: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #e3ad40;
 }
 
 .content img:hover {
@@ -114,7 +116,6 @@ nav a:hover {
     transform: scale(1.2);
 }
 
-
 section {
     padding: 60px 20px;
 }
@@ -135,6 +136,8 @@ section h2 {
 
 p {
     text-align: justify;
+    font-size: 1rem;
+    color: #666;
 }
 
 .item {
@@ -154,9 +157,7 @@ p {
     transform: translateY(-10px);
 }
 
-
 h3 {
-    
     font-weight: normal;
     font-size: 1.8rem;
     margin-bottom: 10px;
@@ -167,19 +168,12 @@ h4 {
     font-weight: lighter;
 }
 
-p {
-    font-size: 1rem;
-    color: #666;
-}
-
-
 .download-img {
     transition: transform 0.3s ease-in-out, filter 0.3s ease;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    justify-content: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -187,11 +181,8 @@ p {
 
 .download-img:hover {
     transform: scale(1.1);
-        filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(20deg) brightness(1.2);
-      
+    filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(20deg) brightness(1.2);
 }
-
-
 
 input[type=submit] {
     background-color: black;
@@ -222,15 +213,9 @@ input[type=submit]:hover {
     margin-top: 10px;
 }
 
-
 footer {
     text-align: right;
     padding: 20px;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 900;
-
 }
 
 label {
@@ -249,17 +234,105 @@ label {
     color: #FFD700;
 }
 
-
 .contactodownload {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px; /* Ajuste esse valor para mais ou menos espaço entre os elementos */
+    gap: 40px;
 }
 
 .box {
     text-align: center;
 }
 
+/* ========= Responsive Adjustments ========= */
 
+@media (max-width: 768px) {
+    .headline h1 {
+        font-size: 2.5rem;
+    }
 
+    nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 0.45rem;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .contactodownload {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+        align-items: center;
+    }
+
+    .item ul {
+        padding: 20px;
+    }
+
+    .language-switcher {
+        top: 5px;
+        right: 5px;
+    }
+
+    .language-switcher a {
+        text-decoration: none;
+        font-size: 0.45girem;
+        color: #000;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .download-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    footer {
+        position: static;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    #inicio {
+        flex-direction: column;
+        min-height: auto;
+        padding: 60px 0;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #e3ad40;
+        padding: 40px 20px;
+    }
+
+    .content {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    footer {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 900;
+    }
+}
