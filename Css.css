@@ -120,10 +120,12 @@ section {
 }
 
 section h2 {
+    font-family: "Poiret One", sans-serif;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: #e3ad40;
+    text-transform: uppercase;
 }
 
 .content {
@@ -154,6 +156,8 @@ p {
 
 
 h3 {
+    
+    font-weight: normal;
     font-size: 1.8rem;
     margin-bottom: 10px;
     color: #444;
@@ -170,7 +174,7 @@ p {
 
 
 .download-img {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -183,19 +187,12 @@ p {
 
 .download-img:hover {
     transform: scale(1.1);
+        filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(20deg) brightness(1.2);
+      
 }
 
-input[type=text],
-input[type=email],
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+table{
+
 }
 
 input[type=submit] {
@@ -253,3 +250,18 @@ label {
 .back-to-top:hover {
     color: #FFD700;
 }
+
+
+.contactodownload {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Ajuste esse valor para mais ou menos espaço entre os elementos */
+}
+
+.box {
+    text-align: center;
+}
+
+
+
