@@ -70,6 +70,20 @@ nav a:hover {
     padding: 40px 20px;
 }
 
+#landingpage {
+    background-image: url(images/fundo.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #e3ad40;
+    padding: 40px 20px;
+}
+
 .container {
     z-index: 2;
     text-align: center;
@@ -309,6 +323,21 @@ label {
     }
 
     #inicio {
+        flex-direction: column;
+        min-height: auto;
+        padding: 60px 0;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #e3ad40;
+        padding: 40px 20px;
+    }
+
+    #landingpage {
         flex-direction: column;
         min-height: auto;
         padding: 60px 0;
